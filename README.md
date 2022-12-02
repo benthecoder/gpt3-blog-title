@@ -28,6 +28,7 @@ This is hugely inspired by [@minimaxir](https://github.com/minimaxir)'s blog pos
     - [Generate prompts](#generate-prompts)
     - [fine tune model](#fine-tune-model)
     - [1. run streamlit app](#1-run-streamlit-app)
+      - [Running with docker](#running-with-docker)
     - [2. run in terminal](#2-run-in-terminal)
   - [Development](#development)
     - [Install dev dependencies](#install-dev-dependencies)
@@ -295,6 +296,19 @@ Note it should show some wandb logs as I've set it up where every prediction is 
 ```bash
 cd src/app
 streamlit run app.py
+```
+
+#### Running with docker
+
+```bash
+cd src/app
+docker build -t streamlit .
+```
+
+You should see a streamlit image when u run `docker images`
+
+```bash
+docker run -p 8501:8501 blog_title
 ```
 
 ### 2. run in terminal
