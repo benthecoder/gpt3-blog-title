@@ -154,6 +154,8 @@ Here are the parameters of the models I fine-tuned with their training time and 
 
 Code to obtain metrics is in [`02_GPT3_metrics.ipynb`](notebooks/02_GPT3_metrics.ipynb)
 
+View the [wandb report of the metrics](https://wandb.ai/benneo/GPT-3%20blog%20title/reports/GPT-3-Fine-Tuning-on-Medium-Blog-Titles--VmlldzozMDY1OTg3)
+
 ## Inference
 
 I decided to choose the babbage model as it the best accuracy and the fact that it's a more powerful model.
