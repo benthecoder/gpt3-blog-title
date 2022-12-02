@@ -255,6 +255,8 @@ This populates `data/2_final` folder with `prompts.jsonl`
 
 Follow the instructions in [02_GPT3_finetune_wb](notebooks/02_GPT3_finetune_wb.ipynb) to fine tune the model and log the results to wandb.
 
+Here is an example of using the cli to fine tune the model
+
 ```bash
 !openai api fine_tunes.create \
     -t <TRAIN_FILE_ID> \ # or path to file
@@ -266,6 +268,22 @@ Follow the instructions in [02_GPT3_finetune_wb](notebooks/02_GPT3_finetune_wb.i
     --suffix "blog title scorer" \ # custom suffix for model
     --classification_positive_class " good" \
     --compute_classification_metrics
+```
+
+Some useful commands
+
+```bash
+# List all created fine-tunes
+openai api fine_tunes.list
+
+# follow a specific fine-tuning progress
+openai api fine_tunes.follow <YOUR_FINE_TUNE_JOB_ID>
+
+# get status
+openai api fine_tunes.get -i <YOUR_FINE_TUNE_JOB_ID>
+
+# Cancel a job
+openai api fine_tunes.cancel -i <YOUR_FINE_TUNE_JOB_ID>
 ```
 
 Once you have your fine-tuned model, you can run the app in two ways.
